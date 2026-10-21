@@ -22,9 +22,8 @@ The footer of each page has a Landing Page / Thank You Page switcher so you can 
    - `phone_click` fires on every tel: link (header, hero, sticky bar, footer).
    - `booking_thank_you` fires on thank-you.html load.
    - `book_external` fires when someone opens Core Practice booking.
-   - `form_submit` fires on the call back form.
    All events also push to `dataLayer`, so GTM triggers can use them directly.
-2. **Call back form** – set `FORM_ENDPOINT` to a webhook (SmileOx inbound webhook, Formspree, Make, Zapier). It POSTs JSON: name, phone, service, best_time, source, page, submitted_at. Leave blank and the form just redirects to thank-you.html (good for testing).
+2. **Thank-you page** – set `thank-you.html` as the booking confirmation / redirect page in Core Practice so completed bookings land on it and fire the conversion. (`FORM_ENDPOINT` in config.js is only used if a call back form is added later.)
 3. **Booking widget** – Core Practice serves the booking page with `X-Frame-Options: SAMEORIGIN`, so it cannot be iframed. The booking section therefore shows a booking panel that opens live availability in a new tab. If Core Practice supplies an embeddable widget URL for the practice, paste it into `BOOKING_EMBED_URL` and the inline widget renders automatically under the banner.
 4. **Hours** – update `HOURS` if trading hours change. The page shows "Open now until 5pm" / "Opens today at 8am" based on Brisbane time.
 

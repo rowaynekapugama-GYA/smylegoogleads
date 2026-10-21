@@ -101,12 +101,12 @@ p { margin: 0 0 1em; }
 .phone-link small { display: block; font-size: 0.72rem; font-weight: 600; color: var(--muted); line-height: 1; margin-bottom: 3px; }
 
 /* ---------- Hero ---------- */
-.hero { background: var(--cream); position: relative; overflow: hidden; }
+.hero { background: var(--cream) url("../img/hero-surgery.jpg") center / cover no-repeat; position: relative; overflow: hidden; }
 .hero::before {
   content: ""; position: absolute; inset: 0;
   background:
-    radial-gradient(900px 500px at 85% 0%, rgba(166,123,91,0.14), transparent 60%),
-    radial-gradient(700px 400px at 0% 100%, rgba(27,35,64,0.08), transparent 60%);
+    linear-gradient(90deg, rgba(244,239,232,0.97) 0%, rgba(244,239,232,0.9) 40%, rgba(244,239,232,0.35) 100%),
+    radial-gradient(900px 500px at 85% 0%, rgba(166,123,91,0.14), transparent 60%);
   pointer-events: none;
 }
 .hero .container { position: relative; display: grid; grid-template-columns: minmax(0,1.15fr) minmax(0,0.85fr); gap: 56px; align-items: center; padding: 72px 0 64px; }
@@ -191,7 +191,6 @@ p { margin: 0 0 1em; }
 .offer li svg { width: 18px; height: 18px; color: var(--bronze); flex: none; margin-top: 3px; }
 .offer .note { font-size: 0.76rem; color: var(--muted); font-style: italic; padding: 0 26px; margin: 4px 0 18px; }
 .offer .btn { align-self: center; }
-.offer-tag { display: block; background: var(--navy); color: #fff; text-align: center; font-size: 0.66rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; padding: 7px 12px; }
 
 /* ---------- Services ---------- */
 .services { background: var(--white); }
@@ -253,24 +252,14 @@ p { margin: 0 0 1em; }
 /* ---------- Final CTA ---------- */
 .cta { background: var(--navy); color: var(--white); position: relative; overflow: hidden; }
 .cta::before { content: ""; position: absolute; inset: 0; background: radial-gradient(700px 400px at 100% 100%, rgba(166,123,91,0.25), transparent 60%); pointer-events: none; }
-.cta .container { position: relative; display: grid; grid-template-columns: minmax(0,1.1fr) minmax(0,0.9fr); gap: 50px; align-items: center; }
+.cta .container { position: relative; }
+.cta .cta-center { text-align: center; max-width: 720px; }
+.cta .cta-center .eyebrow::before { display: none; }
+.cta .cta-center .lead { margin-inline: auto; margin-bottom: 30px; }
+.cta .cta-center .hero-ctas { justify-content: center; }
 .cta h2 { color: var(--white); }
 .cta .lead { color: rgba(255,255,255,0.75); }
 .cta .hero-ctas { margin-bottom: 0; }
-.callback { background: var(--white); color: var(--text); border-radius: var(--radius); padding: 30px; box-shadow: var(--shadow); }
-.callback h3 { margin-bottom: 4px; }
-.callback p.sub { color: var(--muted); font-size: 0.92rem; margin-bottom: 18px; }
-.field { margin-bottom: 14px; }
-.field label { display: block; font-size: 0.82rem; font-weight: 700; color: var(--navy); margin-bottom: 6px; }
-.field input, .field select, .field textarea {
-  width: 100%; padding: 13px 14px; border-radius: 10px; border: 1.5px solid rgba(27,35,64,0.18);
-  font-family: var(--font-body); font-size: 0.95rem; background: var(--white); color: var(--text);
-}
-.field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--bronze); box-shadow: 0 0 0 4px rgba(166,123,91,0.15); }
-.field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-.callback .btn { width: 100%; }
-.callback .privacy { font-size: 0.74rem; color: var(--muted); margin: 12px 0 0; text-align: center; }
-.hp { position: absolute; left: -9999px; }
 
 /* ---------- Footer ---------- */
 .footer { background: var(--navy-deep); color: rgba(255,255,255,0.75); padding: 60px 0 28px; font-size: 0.92rem; }
@@ -312,7 +301,7 @@ p { margin: 0 0 1em; }
   .section { padding: 64px 0; }
   .hero .container { grid-template-columns: minmax(0,1fr); gap: 36px; padding: 52px 0 48px; }
   .offer-grid, .service-grid, .why-grid, .team-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
-  .funds .container, .cta .container, .thanks .container { grid-template-columns: minmax(0,1fr); gap: 36px; }
+  .funds .container, .thanks .container { grid-template-columns: minmax(0,1fr); gap: 36px; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
   .booking iframe { height: 700px; }
   .book-panel { grid-template-columns: minmax(0,1fr); }
@@ -328,10 +317,10 @@ p { margin: 0 0 1em; }
   .header .phone-link span { display: none; }
   .header .btn-book { display: none; }
   .hero .container { padding: 40px 0 40px; }
+  .hero::before { background: linear-gradient(180deg, rgba(244,239,232,0.94) 0%, rgba(244,239,232,0.85) 100%); }
   .hero-ctas .btn { width: 100%; }
   .offer-grid, .service-grid, .why-grid, .team-grid { grid-template-columns: 1fr; }
   .hours-grid { grid-template-columns: 1fr; }
-  .field-row { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: minmax(0,1fr); gap: 28px; }
   .mobile-cta { display: flex; }
   .booking iframe { height: 640px; }
