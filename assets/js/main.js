@@ -117,7 +117,7 @@
         body: JSON.stringify(data)
       }).then(go).catch(function () {
         btn.textContent = original; btn.disabled = false;
-        alert('Sorry, something went wrong sending your request. Please call us on ' + (C.PHONE_DISPLAY || '1300 007 695') + '.');
+        alert('Sorry, something went wrong sending your request. Please call us on ' + (C.PHONE_DISPLAY || '07 4516 2065') + '.');
       });
     });
   }

@@ -17,8 +17,8 @@ window.SMYL_CONFIG = {
   FORM_ENDPOINT: "",
 
   // Practice details (used by the JS for hours and tel links)
-  PHONE_DISPLAY: "1300 007 695",
-  PHONE_TEL: "1300007695",
+  PHONE_DISPLAY: "07 4516 2065",
+  PHONE_TEL: "+61745162065",
   BOOKING_URL: "https://www.corepractice.is/practices/smyldental/smyl-dental#/",
 
   // Core Practice blocks the standard booking page from being iframed (X-Frame-Options: SAMEORIGIN).
