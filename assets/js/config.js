@@ -3,11 +3,11 @@
    Edit this file only. No need to touch the HTML.
    ========================================================== */
 window.SMYL_CONFIG = {
-  // Google Tag Manager container (recommended). Leave blank to skip.
-  GTM_ID: "",                       // e.g. "GTM-XXXXXXX"
-
-  // Google Ads conversion tracking (used if GTM_ID is blank).
-  GOOGLE_ADS_ID: "",                // e.g. "AW-123456789"
+  // GTM (GTM-N789NFZ4) and the Google tag (AW-18469202248) are hard-coded in the <head>
+  // of index.html and thank-you.html, so they load before anything else. These values are
+  // for reference and for firing conversion events; main.js does NOT load the tags again.
+  GTM_ID: "GTM-N789NFZ4",
+  GOOGLE_ADS_ID: "AW-18469202248",
   CONVERSION_LABEL_CALL: "",        // e.g. "AbCdEfGhIj"  (phone click)
   CONVERSION_LABEL_BOOKING: "",     // e.g. "KlMnOpQrSt"  (thank-you page view)
 

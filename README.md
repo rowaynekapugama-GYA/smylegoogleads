@@ -18,7 +18,7 @@ The footer of each page has a Landing Page / Thank You Page switcher so you can 
 
 ## Before go-live (assets/js/config.js)
 
-1. **Tracking** – set `GTM_ID` (preferred) or `GOOGLE_ADS_ID` + the two conversion labels.
+1. **Tracking** – GTM `GTM-N789NFZ4` and the Google Ads tag `AW-18469202248` are installed in the `<head>` of both pages (GTM noscript straight after `<body>`). Add the call and booking conversion labels to `config.js` once Google Ads gives them to you, or build the conversions in GTM off the events below.
    - `phone_click` fires on every tel: link (header, hero, sticky bar, footer).
    - `booking_thank_you` fires on thank-you.html load.
    - `book_external` fires when someone opens Core Practice booking.
